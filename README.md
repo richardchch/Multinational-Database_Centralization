@@ -1,4 +1,4 @@
-# Multinational Retail Database Centralization Project
+# Multinational Retail Data Centralization Project
 
 ## Table of Contents
 
@@ -87,7 +87,7 @@ To get started with this project, follow the instructions below:
 ### Steps:
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/richardchch/data-centralization-project.git
+   git clone https://github.com/richardchch/Multinational-Retail-Data-Centralization.git
    cd data-centralization-project
 
 2. **Install Dependencies: Create a virtual environment and activate it (optional, but recommended):**
