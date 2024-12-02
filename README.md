@@ -1,12 +1,13 @@
-# Multinational Database Centralization Project
+# Multinational Retail Database Centralization Project
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
 2. [Installation Instructions](#installation-instructions)
 3. [Usage Instructions](#usage-instructions)
 4. [Database Schema Changes](#database-schema-changes)
-5. [File Structure](#file-structure)
-6. [License](#license)
+5. [SQL Files And Queries](#sql-files-and-queries)
+6. [File Structure](#file-structure)
+7. [License](#license)
 
 ## Project Overview
 
@@ -14,7 +15,7 @@ The **Data Centralization Project** is designed to extract, clean, and load data
 
 The goal of this project is to automate the extraction, cleaning, and storage of data from various sources such as an external API (for store details), PDF files (for card details), and CSV files from an S3 bucket. After data cleaning, it is uploaded to a PostgreSQL database for further analysis and reporting.
 
-### What the Project Does:
+### Project Objectives:
 This project integrates data from diverse sources, standardizes it, and loads it into a structured PostgreSQL database following a star schema model. Key functionalities include:
 
 - **Data Extraction:**
@@ -36,10 +37,10 @@ This project integrates data from diverse sources, standardizes it, and loads it
 This pipeline provides a robust foundation for centralized data storage, ensuring the data is clean, consistent, and optimized for downstream analysis and business intelligence.
 
 
-### Aim of the Project:
+### Project Aim:
 The primary aim of this project is to automate the end-to-end data pipeline for centralizing data from various sources, processing it, and storing it in a relational database for further use.
 
-### What I Learned:
+### Insights Gained:
 This project provided valuable hands-on experience in designing and implementing a data pipeline for a centralized database. Key takeaways include:
 
 - **Data Integration Techniques:**
@@ -63,7 +64,7 @@ This project provided valuable hands-on experience in designing and implementing
   - Building an automated, scalable data pipeline capable of handling diverse data sources, transforming raw data into a clean, analytics-ready state.
   - Ensuring data consistency, reliability, and usability across all stages of the pipeline.
 
-This project enhanced my technical proficiency in data engineering, database management, and pipeline automation, equipping me with practical skills for real-world data processing challenges.
+This project enhances technical proficiency in data engineering, database management, and pipeline automation, equipping one with practical skills for real-world data processing challenges.
 
 
 ## Installation Instructions
@@ -78,7 +79,7 @@ To get started with this project, follow the instructions below:
 ### Steps:
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/data-centralization-project.git
+   git clone https://github.com/richardchch/data-centralization-project.git
    cd data-centralization-project
 
 2. **Install Dependencies: Create a virtual environment and activate it (optional, but recommended):**
@@ -211,6 +212,37 @@ The following changes were made in the `dim_card_details` table:
   - `date_payment_confirmed`: `TEXT` → `DATE`
 
 
+## SQL Files and Queries
+
+This section details the SQL operations performed as part of the **Data Querying** process, divided into two categories: **Creating the Database Schema** and **Querying the Data**. The actual SQL queries can be found in the corresponding `.sql` files.
+
+### 1. Creating the Database Schema
+
+This section includes SQL queries for setting up the database schema, including table creation, primary and foreign key constraints, and data type definitions. These operations are organized into the following files:
+
+- **`create_schema.sql`**: Contains queries for creating tables and defining relationships between them, including:
+  - Creating dimension (`dim_*`) and fact tables.
+  - Defining primary keys and foreign keys.
+  - Setting data types and constraints.
+
+### 2. Querying the Data
+
+This section includes SQL queries for extracting, aggregating, and analyzing data. These queries support various business intelligence and operational needs, such as identifying top-performing countries, sales trends, and staff distribution.
+
+The queries are organized into the following files:
+- **`data_queries.sql`**: Contains queries related to sales performance, including:
+  - **Query 1**: Countries with the most physical stores.
+  - **Query 2**: Months with the highest sales.
+  - **Query 3**: Sales breakdown by location (online vs offline).
+  - **Query 4**: Revenue and sales breakdown by store type.
+  - **Query 5**: Historical sales data by year and month.
+  - **Query 6**: Staff numbers by country.
+  - **Query 7**: Store type performance in Germany.
+  - **Query 8**: Average time between sales, grouped by year.
+
+Each `.sql` file contains all the queries.
+
+---
 
 
 
@@ -225,7 +257,9 @@ The following changes were made in the `dim_card_details` table:
 - **`README.md`**: Contains this file structure documentation and project instructions.
 - **`LICENSE`**: Legal information and terms for using the project.
 - **`db_creds.yaml`**: This file stores your database credentials (should be kept private and not included in the GitHub repository).
-
+- **`sql/`**  Contains SQL scripts for schema creation and querying.
+  -**`create_schema.sql`**
+  -**`data_queries`.sql**
 
 
 
