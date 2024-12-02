@@ -88,7 +88,7 @@ To get started with this project, follow the instructions below:
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/richardchch/Multinational-Retail-Data-Centralization.git
-   cd data-centralization-project
+   cd Multinational-Retail-Data-Centralization
 
 2. **Install Dependencies: Create a virtual environment and activate it (optional, but recommended):**
    ```bash
