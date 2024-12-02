@@ -1,31 +1,35 @@
 # Multinational Retail Database Centralization Project
 
 ## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Installation Instructions](#installation-instructions)
-3. [Usage Instructions](#usage-instructions)
-4. [Database Schema Changes](#database-schema-changes)
-5. [SQL Files And Queries](#sql-files-and-queries)
-6. [File Structure](#file-structure)
-7. [License](#license)
+
+- [Project Overview](#project-overview)
+- [Installation Instructions](#installation-instructions)
+- [Usage Instructions](#usage-instructions)
+- [Database Schema Changes](#database-schema-changes)
+- [SQL Files and Queries](#sql-files-and-queries)
+- [File Structure](#file-structure)
+- [License](#license)
+
+---
 
 ## Project Overview
 
-The **Data Centralization Project** is designed to extract, clean, and load data from multiple sources into a local PostgreSQL database. The project primarily focuses on handling API data, PDF data, S3 data, and data from a relational database. 
+The Data Centralization Project is designed to extract, clean, and load data from multiple sources into a local PostgreSQL database. The project primarily focuses on handling API data, PDF data, S3 data, and data from a relational database.
 
 The goal of this project is to automate the extraction, cleaning, and storage of data from various sources such as an external API (for store details), PDF files (for card details), and CSV files from an S3 bucket. After data cleaning, it is uploaded to a PostgreSQL database for further analysis and reporting.
 
 ### Project Objectives:
+
 This project integrates data from diverse sources, standardizes it, and loads it into a structured PostgreSQL database following a star schema model. Key functionalities include:
 
 - **Data Extraction:**
   - Retrieves data from an AWS RDS database, external APIs, PDF documents, and CSV files stored in an S3 bucket.
 
 - **Data Cleaning and Transformation:**
-  - Cleans inconsistent data, such as removing extraneous characters (e.g., `?` and `£`) and handling missing or invalid values.
-  - Standardizes data formats by converting columns to appropriate data types (e.g., `TEXT` to `UUID`, `SMALLINT`, `NUMERIC`, or `VARCHAR`).
-  - Merges duplicate or redundant columns (e.g., consolidating `latitude` fields in the `store_details` table).
-  - Introduces derived fields for operational insights (e.g., `weight_class` in the `products` table to categorize items by delivery weight).
+  - Cleans inconsistent data, such as removing extraneous characters (e.g., ? and £) and handling missing or invalid values.
+  - Standardizes data formats by converting columns to appropriate data types (e.g., TEXT to UUID, SMALLINT, NUMERIC, or VARCHAR).
+  - Merges duplicate or redundant columns (e.g., consolidating latitude fields in the store_details table).
+  - Introduces derived fields for operational insights (e.g., `weight_class` in the products table to categorize items by delivery weight).
 
 - **Database Normalization:**
   - Implements a star schema by creating dimension tables (`dim_*`) with clearly defined primary keys.
@@ -36,11 +40,12 @@ This project integrates data from diverse sources, standardizes it, and loads it
 
 This pipeline provides a robust foundation for centralized data storage, ensuring the data is clean, consistent, and optimized for downstream analysis and business intelligence.
 
-
 ### Project Aim:
+
 The primary aim of this project is to automate the end-to-end data pipeline for centralizing data from various sources, processing it, and storing it in a relational database for further use.
 
 ### Insights Gained:
+
 This project provided valuable hands-on experience in designing and implementing a data pipeline for a centralized database. Key takeaways include:
 
 - **Data Integration Techniques:**
@@ -49,7 +54,7 @@ This project provided valuable hands-on experience in designing and implementing
 
 - **Data Cleaning and Transformation:**
   - Handling inconsistent data formats by identifying and resolving issues such as invalid characters, redundant columns, and missing values.
-  - Applying robust data type conversions to standardize datasets (e.g., converting `TEXT` to `UUID`, `NUMERIC`, or `VARCHAR`).
+  - Applying robust data type conversions to standardize datasets (e.g., converting TEXT to UUID, NUMERIC, or VARCHAR).
   - Creating derived fields for actionable insights (e.g., categorizing product weights into delivery-friendly classes).
 
 - **Database Design and Normalization:**
@@ -65,6 +70,9 @@ This project provided valuable hands-on experience in designing and implementing
   - Ensuring data consistency, reliability, and usability across all stages of the pipeline.
 
 This project enhances technical proficiency in data engineering, database management, and pipeline automation, equipping one with practical skills for real-world data processing challenges.
+
+---
+
 
 
 ## Installation Instructions
@@ -262,7 +270,7 @@ Each `.sql` file contains all the queries.
   -**`data_queries`.sql**
 
 
-
+---
 
 ### License
 
